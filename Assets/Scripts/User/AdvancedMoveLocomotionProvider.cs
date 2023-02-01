@@ -72,15 +72,12 @@ public class AdvancedMoveLocomotionProvider : LocomotionProvider
 
         if (inputAction.action.IsPressed())
         {
-            Debug.Log("Running");
             moveProvider.moveSpeed = speed  * running_faster_ratio;
             CheckMotion();
         }
         else
         {
             moveProvider.moveSpeed = speed;
-            Debug.Log("Walking");
-            Debug.Log(speed);
             CheckMotion();
         }
         ResetPosition();
