@@ -19,6 +19,7 @@ public class AdvancedMoveLocomotionProvider : LocomotionProvider
     [SerializeField] private CharacterController characterController;
     [SerializeField] private InputActionProperty inputActionProperty;
 
+
     private float toggleSpeed = 0.5f;
     private Vector3 startPos;
     private Vector3 walkSpeed = Vector3.zero;
@@ -82,6 +83,10 @@ public class AdvancedMoveLocomotionProvider : LocomotionProvider
             characterController.Move(walkSpeed * Time.deltaTime);
             CheckMotion();
         }
+
+        CheckMotion();
+
+        
 
         ResetPosition();
         cam.LookAt(FocusTarget());
