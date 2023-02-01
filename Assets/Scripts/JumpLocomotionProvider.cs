@@ -15,10 +15,11 @@ public class JumpLocomotionProvider : LocomotionProvider
     private Vector3 verticalSpeed = Vector3.zero;
     private bool downwardCollided = false;
 
-    void Update()
+    void LateUpdate()
     {
         if (characterController.isGrounded || downwardCollided)
         {
+
             if (InputActionProperty.action.IsPressed())
             {
                 verticalSpeed = Vector3.up * jumpSpeed;

@@ -15,8 +15,10 @@ public class AdvancedMoveLocomotionProvider : LocomotionProvider
     [SerializeField] private Transform camHolder = null;
 
     [SerializeField] private CharacterController characterController;
-    [SerializeField] private InputActionProperty inputAction;
-    private ContinuousMoveProviderBase moveProvider;
+    
+    //[SerializeField] private InputActionProperty inputAction;
+    //private ContinuousMoveProviderBase moveProvider;
+
     
     private float toggleSpeed = 0.5f;
     private Vector3 startPos;
@@ -24,7 +26,7 @@ public class AdvancedMoveLocomotionProvider : LocomotionProvider
     void Start()
     {
         startPos = cam.localPosition;
-        moveProvider = GetComponent<ContinuousMoveProviderBase>();
+        //moveProvider = GetComponent<ContinuousMoveProviderBase>();
     }
 
     private void PlayMotion(Vector3 motion)
@@ -68,21 +70,24 @@ public class AdvancedMoveLocomotionProvider : LocomotionProvider
     {
         if (!enable) return;
 
-        float speed = moveProvider.moveSpeed;
+        CheckMotion();
 
-        if (inputAction.action.IsPressed())
-        {
-            Debug.Log("Running");
-            moveProvider.moveSpeed = speed  * running_faster_ratio;
-            CheckMotion();
-        }
-        else
-        {
-            moveProvider.moveSpeed = speed;
-            Debug.Log("Walking");
-            Debug.Log(speed);
-            CheckMotion();
-        }
+        //if (inputAction.action.IsPressed())
+        //{
+            //Debug.Log("Running");
+            //moveProvider.moveSpeed = speed  * running_faster_ratio;
+            //CheckMotion();
+        //}
+        //else
+        //{
+            //moveProvider.moveSpeed = speed;
+            //Debug.Log("Walking");
+            //Debug.Log(speed);
+            //CheckMotion();
+        //}
+
+
+
         ResetPosition();
         cam.LookAt(FocusTarget());
     }
