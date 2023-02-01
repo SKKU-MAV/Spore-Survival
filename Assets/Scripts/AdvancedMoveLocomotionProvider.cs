@@ -37,8 +37,8 @@ public class AdvancedMoveLocomotionProvider : LocomotionProvider
     private Vector3 FootStepMotion(float ratio)
     {
         Vector3 pos = Vector3.zero;
-        pos.x += Mathf.Cos(Time.time * frequency / 2 * ratio) * amplitude * 2;
-        pos.y += Mathf.Sin(Time.time * frequency * ratio) * amplitude ;
+        pos.x += Mathf.Cos(Time.time * frequency / 2 * ratio) * amplitude * 2 * ratio;
+        pos.y += Mathf.Sin(Time.time * frequency * ratio) * amplitude * ratio;
 
         return pos;
     }
