@@ -10,6 +10,8 @@ public class MobRandomMoving : MonoBehaviour
 
     [SerializeField]
     private Transform floor;
+    [SerializeField]
+    private Animator object;
 
     private float move_x_pos;
     private float move_z_pos;
@@ -17,45 +19,40 @@ public class MobRandomMoving : MonoBehaviour
     private float random_factor = 5f;
 
     Vector3 destination;
+    float timer;
+    int waitingTime;
 
     private void Awake()
     {
+        timer = 0.0f;
+        waitingTime = 2;
         agent = GetComponent<NavMeshAgent>();
+        object = GetComponent<Animator>();
         destination = transform.position;
     }
     
     private void Update()
     {
-        Debug.Log($"Dest : {destination}");
-        Debug.Log($"Pos: {transform.position}");
-
-        if ((transform.position - destination).magnitude < 0.1f)
+        timer += Time.deltaTime;
+   
+        if(timer > waitingTime)
         {
-            Debug.Log(destination);
+            if ((transform.position - destination).magnitude < 0.1f)
+            {
+            object.
             move_x_pos = Random.Range(-random_factor, random_factor);
             move_z_pos = Random.Range(-random_factor, random_factor);
             destination = new Vector3(move_x_pos, 0, move_z_pos);
 
-            Waiting(Random.Range(2f, 3f));
+
+
             agent.SetDestination(destination);
+            }
 
-
-        }
-
-
-
-    }
-
-    private void Waiting(float waitingTime)
-    {
-        float startTime = Time.time;
-
-        while (true)
-        {
-            if (Time.time - startTime >= waitingTime)
-                return;
+            timer = 0;
         }
     }
+
 
 
 

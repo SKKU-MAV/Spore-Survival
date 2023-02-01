@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 94194de6acb5e46109d6ce946675c69a, type: 2}
+--- !u!1 &32154269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 712763581221244047, guid: 196362b23cf6c7f42b498b46e62d7f4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1697833213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &33204133
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +348,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178068706}
   m_CullTransparentMesh: 1
+--- !u!1 &190343757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1250690161900600, guid: e6f343cc46467004f811ce2ba3a3841b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1840673166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -4767,7 +4779,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114884884255993284, guid: 196362b23cf6c7f42b498b46e62d7f4a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 196362b23cf6c7f42b498b46e62d7f4a, type: 3}
 --- !u!4 &1697833214 stripped
 Transform:
@@ -4775,6 +4788,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1697833213}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &1697833218
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32154269}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1697833219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32154269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f2cc5379adb42b3b73eb67087a4f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1697833218}
+  floor: {fileID: 590095669}
+  random_factor: 5
 --- !u!1 &1746130463
 GameObject:
   m_ObjectHideFlags: 0
@@ -4964,6 +5014,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1795935890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1335726306580732, guid: 23f312332b5cd5542ba196450880e89b,
+    type: 3}
+  m_PrefabInstance: {fileID: 266250511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &1795935894
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795935890}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2.1953187
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 14.200689
+  m_BaseOffset: 7.1003447
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1795935895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795935890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f2cc5379adb42b3b73eb67087a4f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1795935894}
+  floor: {fileID: 590095669}
+  random_factor: 5
 --- !u!1001 &1840673166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5039,6 +5132,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1840673166}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &1840673171
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190343757}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2.7833562
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 18.656446
+  m_BaseOffset: 9.328223
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1840673172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190343757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f2cc5379adb42b3b73eb67087a4f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1840673171}
+  floor: {fileID: 590095669}
+  random_factor: 5
 --- !u!1 &1935185861
 GameObject:
   m_ObjectHideFlags: 0
