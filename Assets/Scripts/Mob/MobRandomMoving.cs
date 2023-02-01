@@ -11,7 +11,7 @@ public class MobRandomMoving : MonoBehaviour
     [SerializeField]
     private Transform floor;
     [SerializeField]
-    private Animator object;
+    private Animator animator;
 
     private float move_x_pos;
     private float move_z_pos;
@@ -22,35 +22,38 @@ public class MobRandomMoving : MonoBehaviour
     float timer;
     int waitingTime;
 
-    private void Awake()
+    private void Start()
     {
         timer = 0.0f;
-        waitingTime = 2;
+        waitingTime = 5;
         agent = GetComponent<NavMeshAgent>();
-        object = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         destination = transform.position;
     }
     
     private void Update()
     {
-        timer += Time.deltaTime;
-   
-        if(timer > waitingTime)
-        {
+        
+
+            //목적지에 도착	
             if ((transform.position - destination).magnitude < 0.1f)
             {
-            object.
-            move_x_pos = Random.Range(-random_factor, random_factor);
-            move_z_pos = Random.Range(-random_factor, random_factor);
-            destination = new Vector3(move_x_pos, 0, move_z_pos);
+                timer += Time.deltaTime;
+
+                animator.SetBool("IsWalking", false);
+                move_x_pos = Random.Range(-random_factor, random_factor);
+                move_z_pos = Random.Range(-random_factor, random_factor);
 
 
-
-            agent.SetDestination(destination);
+                //목적지를 갱신
+                if(timer > waitingTime)
+                {
+                    destination = new Vector3(move_x_pos, 0, move_z_pos);
+                    agent.SetDestination(destination);
+                    animator.SetBool("IsWalking", true);
+                    timer = 0;
+                }
             }
-
-            timer = 0;
-        }
     }
 
 
