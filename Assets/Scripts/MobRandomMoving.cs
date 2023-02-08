@@ -22,7 +22,7 @@ public class MobRandomMoving : MonoBehaviour
     float timer;
     int waitingTime;
 
-    private void Start()
+    private void Awake()
     {
         timer = 0.0f;
         waitingTime = 5;
@@ -31,7 +31,7 @@ public class MobRandomMoving : MonoBehaviour
         destination = transform.position;
     }
     
-    private void Update()
+    private void LateUpdate()
     {
         
 
