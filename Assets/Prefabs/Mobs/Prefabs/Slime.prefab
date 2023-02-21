@@ -43,6 +43,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4885079432260988}
   - component: {fileID: 95471671811264702}
+  - component: {fileID: 1382422596690058190}
+  - component: {fileID: 1748684404659889196}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -87,6 +89,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1382422596690058190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090219386143568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359a8a3da45fc494996535e8b5e60754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 0}
+  chaseRange: 5
+  turnSpeed: 5
+--- !u!114 &1748684404659889196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090219386143568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f2cc5379adb42b3b73eb67087a4f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  floor: {fileID: 0}
+  animator: {fileID: 0}
+  planeObject: {fileID: 0}
 --- !u!1 &1159745215084782
 GameObject:
   m_ObjectHideFlags: 0
