@@ -2761,7 +2761,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765480168}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 064d38065165131459581a5fe179641e, type: 3}
   m_Name: 
@@ -5145,7 +5145,7 @@ PrefabInstance:
     - target: {fileID: 1432007343466492864, guid: 73494d3251fc44ce885be41de00f4ab8,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1432007343466492871, guid: 73494d3251fc44ce885be41de00f4ab8,
         type: 3}
